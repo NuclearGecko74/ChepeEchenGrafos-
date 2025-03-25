@@ -37,7 +37,10 @@ namespace ChepeEchenGrafos______
 
             for (int i = 0; i < adjacencyList.Count; i++)
             {
-                adjacencyList[i].Remove(vertex);
+                if (adjacencyList[i].Contains(vertex))
+                {
+                    adjacencyList[i].Remove(vertex);
+                }
             }
 
             adjacencyList.RemoveAt(vertex);
