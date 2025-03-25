@@ -10,7 +10,9 @@ namespace ChepeEchenGrafos______
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Echen Paja 🗣🔥🔥");
+            Menu menu = new Menu();
+
+            menu.Show();
         }
     }
 }
