@@ -33,6 +33,8 @@ namespace ChepeEchenGrafos______
 
         public void DeleteVertex(int vertex)
         {
+            if (vertex > vertices) return;
+
             for (int i = 0; i < adjacencyList.Count; i++)
             {
                 adjacencyList[i].Remove(vertex);
@@ -44,6 +46,8 @@ namespace ChepeEchenGrafos______
 
         public void AddEdge(int origin, int destination)
         {
+            if (origin > vertices || destination > vertices) return;
+
             adjacencyList[origin].Add(destination);
 
             if (!direction && origin != destination)
@@ -54,6 +58,8 @@ namespace ChepeEchenGrafos______
 
         public void DeleteEdge(int origin, int destination)
         {
+            if (origin > vertices || destination > vertices) return;
+
             adjacencyList[origin].Remove(destination);
 
             if (!direction)
